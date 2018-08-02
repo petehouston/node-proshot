@@ -8,7 +8,7 @@
   "version": "1.3.0",
   "description": "Handy tool to capture website screenshots using Puppeteer.",
   "bin": {
-		"link": "bin/cli.js"
+		"proscreenshot": "bin/proscreenshot.js"
 	},
 	"engines": {
 		"node": ">=7.4.0"

@@ -17,7 +17,7 @@ async function multishot(urls, path, opts = {}) {
     const _ext = 'extension' in opts ? opts.extension : 'png';
 
     const browser = await puppeteer.launch({
-        headless: !!DEBUG_HEADLESS ? DEBUG_HEADLESS : true
+        headless: !!process.env.DEBUG_HEADLESS ? process.env.DEBUG_HEADLESS : true
     });
 
     const page = await browser.newPage();

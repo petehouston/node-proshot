@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "puppeteer": "^1.6.1"
+  },
+  "name": "node-proshot",
+  "version": "1.0.0",
+  "description": "Handy tool to capture website screenshots using Puppeteer.",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/petehouston/node-proshot.git"
+  },
+  "keywords": [
+    "puppeteer",
+    "screenshot",
+    "webshot",
+    "photoshot",
+    "capture"
+  ],
+  "author": "Pete Houston <contact@petehouston.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/petehouston/node-proshot/issues"
+  },
+  "homepage": "https://github.com/petehouston/node-proshot#readme"
+}

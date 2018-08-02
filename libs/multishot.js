@@ -25,7 +25,7 @@ async function multishot(urls, path, opts = {}) {
 
     for(let i = 0; i < urls.length; ++i) {
         let url = normalizeUrl(urls[i]);
-        console.log(url);
+
         let _filename = makeFilename(url, _path, _ext);
         await page.goto(url, {
             waitUntil: 'networkidle2'

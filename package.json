@@ -4,7 +4,7 @@
     "url-parse": "^1.4.3"
   },
   "name": "node-proshot",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Handy tool to capture website screenshots using Puppeteer.",
   "main": "index.js",
   "devDependencies": {},

@@ -10,7 +10,8 @@ async function screenshot(url, path, opts = {}) {
     const _timeout = 'timeout' in opts ? opts.timeout : 5000;
 
     const browser = await puppeteer.launch({
-        headless: !!process.env.DEBUG_HEADLESS ? process.env.DEBUG_HEADLESS : true
+        // headless: !!process.env.DEBUG_HEADLESS ? process.env.DEBUG_HEADLESS : true
+        headless: false
     });
     const page = await browser.newPage();
     await page.setViewport(viewport);

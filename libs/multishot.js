@@ -1,5 +1,6 @@
 const puppeteer = require('puppeteer');
 const normalizeUrl = require('../utils/normalize_url');
+const isDebugEnabled = require('../utils/is_debug');
 
 function makeFilename(url, path, ext) {
     let u = new URL(url);
@@ -17,7 +18,7 @@ async function multishot(urls, path, opts = {}) {
     const _ext = 'extension' in opts ? opts.extension : 'png';
 
     const browser = await puppeteer.launch({
-        headless: !!process.env.DEBUG_HEADLESS ? process.env.DEBUG_HEADLESS : true
+        headless: isDebugEnabled() ? false : true
     });
 
     const page = await browser.newPage();

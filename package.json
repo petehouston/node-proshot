@@ -5,10 +5,11 @@
     "url-parse": "^1.4.3"
   },
   "name": "node-proshot",
-  "version": "1.3.5",
+  "version": "1.3.6",
   "description": "Handy tool to capture website screenshots using Puppeteer.",
   "bin": {
-		"proscreenshot": "bin/proscreenshot.js"
+    "proscreenshot": "bin/proscreenshot.js",
+    "promultishot": "bin/promultishot.js"
 	},
 	"engines": {
 		"node": ">=7.4.0"

@@ -10,13 +10,54 @@ $ npm install node-proshot
 
 ## Usage
 
+### CLI
 
+Install as global command.
+
+```
+$ npm i -g node-proshot
+```
+
+To take screenshot of a website, use `proscreenshot`
+
+```
+    Usage
+        $ proscreenshot <url> <filename> 
+
+    Options
+        --viewport : Set viewport for screenshot, 'WIDTH:HEIGHT'. Default: '1280:720'.
+        --timeout  : Set time to wait for complete ajax loading in milliseconds. Default: 5000.
+
+    Example
+        $ proscreenshot --viewport=1920:1080 petehouston.com petehouston.com.png
+        $ proscreenshot --timeout=6000 petehouston.com petehouston.com.png
+```
+
+To take screenshots for multiple websites in a session, use `promultishot`. Use can also use `proscreenshot`, but `promultishot` is more efficient.
+
+```
+    Usage
+        $ promultishot <url> <url> <url> ... 
+
+    Options
+        --path      : Set directory to store screenshots. Default to where script is executed.
+        --viewport  : Set viewport for screenshot, 'WIDTH:HEIGHT'. Default: '1280:720'.
+        --timeout   : Set time to wait for complete ajax loading in milliseconds. Default: 5000.
+        --extension : Set image MIME type, either 'jpg' or 'png'. Default: 'png'.
+
+    Example
+        $ promultishot --viewport=1920:1080 petehouston.com petehouston.com.png
+        $ promultishot --timeout=6000 petehouston.com petehouston.com.png
+```
+
+
+### API
 ```js
 const proshot = require('node-proshot');
 ```
 
 
-## Take a screenshot for a website
+### Take a screenshot for a website
 
 ```js
 proshot.screenshot(URL, FILE_NAME_TO_SAVE, CONFIG);
@@ -43,7 +84,7 @@ proshot.screenshot('https://petehouston.com', 'petehouston.com.png', { timeout: 
 proshot.screenshot('https://moso.com', 'moso.com.jpg');
 ```
 
-## Take screenshots for multiple websites at a time
+### Take screenshots for multiple websites at a time
 
 ```js
 proshot.multishot(URL_ARRAY, DIRECTORY_TO_SAVE, CONFIG);

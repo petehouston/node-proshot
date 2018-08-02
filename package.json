@@ -3,7 +3,7 @@
     "puppeteer": "^1.6.1"
   },
   "name": "node-proshot",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Handy tool to capture website screenshots using Puppeteer.",
   "main": "index.js",
   "devDependencies": {},

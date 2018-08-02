@@ -1,9 +1,10 @@
 {
   "dependencies": {
-    "puppeteer": "^1.6.1"
+    "puppeteer": "^1.6.1",
+    "url-parse": "^1.4.3"
   },
   "name": "node-proshot",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Handy tool to capture website screenshots using Puppeteer.",
   "main": "index.js",
   "devDependencies": {},

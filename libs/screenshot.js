@@ -1,5 +1,8 @@
 const puppeteer = require('puppeteer');
 
+//TODO: 
+// - refactor this screenshot part
+// - some crazy lazy loading not complete
 async function screenshot(url, path, opts = {}) {
     const viewport = 'viewport' in opts ? opts.viewport : {
         width: 1280, height: 720
@@ -7,7 +10,7 @@ async function screenshot(url, path, opts = {}) {
     const _timeout = 'timeout' in opts ? opts.timeout : 5000;
 
     const browser = await puppeteer.launch({
-        headless: true
+        headless: false
     });
     const page = await browser.newPage();
     await page.setViewport(viewport);

@@ -1,4 +1,4 @@
-#!/usr/bin/node env
+#!/usr/local/bin/node env
 
 'use strict';
 

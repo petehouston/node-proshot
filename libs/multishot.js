@@ -1,3 +1,4 @@
+const { URL } = require('url');
 const puppeteer = require('puppeteer');
 const normalizeUrl = require('../utils/normalize_url');
 const isDebugEnabled = require('../utils/is_debug');
